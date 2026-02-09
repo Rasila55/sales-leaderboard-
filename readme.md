@@ -47,3 +47,25 @@ Used Thunder Client. Works fine locally, tested with a few agents.
 Need to deploy this and push to GitHub. Also might add some input validation for edge cases.
 
 Built for Nest Nepal internship task.
+## Live Deployment
+
+**API Base URL**: https://sales-leaderboard-pbdt.onrender.com
+
+**Endpoints:**
+- Health Check: `GET https://sales-leaderboard-pbdt.onrender.com/`
+- Add Sales Data: `POST https://sales-leaderboard-pbdt.onrender.com/api/sales`
+- Get Leaderboard: `GET https://sales-leaderboard-pbdt.onrender.com/api/leaderboard`
+
+**Test the API:**
+```bash
+# Get leaderboard
+curl https://sales-leaderboard-pbdt.onrender.com/api/leaderboard
+
+# Add sales data
+curl -X POST https://sales-leaderboard-pbdt.onrender.com/api/sales \
+  -H "Content-Type: application/json" \
+  -d '{"agentName":"Test User","amountSold":100000,"numberOfSales":5}'
+```
+
+Note: Free tier may take 30 seconds to wake up on first request.
+
